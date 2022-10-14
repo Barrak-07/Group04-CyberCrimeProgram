@@ -14,11 +14,11 @@ import AddReminder from './components/profile-forms/AddReminder';
 import Profiles from './components/profiles/Profiles';
 import Profile from './components/profile/Profile';
 import Posts from './components/posts/Posts';
-
+import Landing1 from './components/dashboard/Admin2Dashboard';
 import AddMedicine from './components/medicine/AddMedicine';
 import ViewMedicines from './components/medicine/ViewMedicines';
 import Medicine from './components/medicine/Medicine';
-
+import Login1 from './components/adminLogin/login';
 import PrivateRoute from './components/routing/PrivateRoute';
 import './App.css';
 
@@ -49,6 +49,8 @@ const App = () => {
             <Route exact path="/register" component={ Register } /> 
             <Route exact path="/login" component={ Login } />
             <Route exact path='/adminLogin' component={ AdminLogin } />
+            <Route exact path='/admin2Dashboard' component={ Landing1 } />
+            <Route exact path='/admin2Login' component={ Login1 } />
             <Route exact path="/profiles" component={ Profiles } />
             <Route exact path="/profile/:id" component={ Profile } />
             <PrivateRoute exact path="/dashboard" component={ Dashboard } />

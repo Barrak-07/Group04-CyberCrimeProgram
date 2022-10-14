@@ -25,6 +25,6 @@
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Adhil Ajmal",
+  "author": "Group08",
   "license": "MIT"
 }

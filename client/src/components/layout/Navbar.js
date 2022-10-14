@@ -51,7 +51,7 @@ const Navbar = ({ auth: { isAuthenticated, loading, user }, logout }) => {
         <li><Link to="/profiles" style={{ color: '#fff', background: '#17a2b8'}}>Profiles</Link></li>
         <li><Link to="/register" style={{ color: '#fff', background: '#17a2b8'}}>User Registration</Link></li>
         <li><Link to="/login" style={{ color: '#fff', background: '#17a2b8'}}>User Login</Link></li>
-        <li><Link to="/adminLogin">Admin Login</Link></li>
+        <li><Link to="/admin2Login">Admin Login</Link></li>
       </ul>
   );
 

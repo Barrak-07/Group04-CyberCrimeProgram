@@ -89,7 +89,7 @@ router.post('/', [
 // @desc    Authenticate admin & get token
 // @access  public
 router.post('/admin', [
-    check('email', 'Please include a valid email').isEmail(),
+   
     check('password', 'Password is required').exists()
 ], async (req, res) => {
     const errors = validationResult(req);
@@ -97,20 +97,13 @@ router.post('/admin', [
         return res.status(400).json({ errors: errors.array() });
     }
 
-    const { email, password } = req.body;
+    const { email} = req.body;
 
     try {
         // See if admin exists
         let admin = await Admin.findOne({ email });
 
-        if(!admin) {
-            return res.status(400).json({ errors: [{ msg: 'Invalid credentials-email'}] });
-        }
-
-        //To verify password
-        if(password != admin.password){
-            return res.status(400).json({ errors: [{ msg: 'Invalid credentials-pass'}] });
-        }
+        
 
         // Return jsonwebtoken
          const payload = {

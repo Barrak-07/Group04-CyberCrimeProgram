@@ -20,7 +20,7 @@ app.use('/api/posts', require('./routes/api/posts'));
 app.use('/api/admin', require('./routes/api/admin'));   //Maliks
 app.use('/api/medicine', require('./routes/api/medicine')); //Maliks
 app.use('/api/cart', require('./routes/api/cart'));     //Maliks
-
+app.use('/api/admin2', require('./routes/api/adminLogin'));
 
 const PORT = process.env.PORT || 5000;
 
